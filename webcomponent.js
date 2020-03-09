@@ -1,7 +1,7 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        <h1>Hello xxxWorld</h1>
+        <h1>Hello ivan</h1>
     `;
     alert("This is alert box!"); 
 
