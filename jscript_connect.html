@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The XMLHttpRequest Object</h1>
+
+<button type="button" onclick="loadDoc()">Request data</button>
+
+<p id="demo"></p>
+ 
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  var username = "default\admin";
+  var password = "Hu4%EyYd";
+
+// create a JSON object
+const params = {
+    username: 'attacomsian',
+    password: '123456'
+};
+  url =   "https://vsystem.ingress.dh-gv528904.dhaas-live.shoot.live.k8s-hana.ondemand.com/app/pipeline-modeler/openapi/service/a55ef27e-14e4-4345-a9f4-50402d505e1f/v1/uploadjson/"
+  xhttp.open("POST",url, true);
+ xhttp.setRequestHeader("Authorization", "Basic " + btoa(username + ":" + password));  
+
+
+ 
+  // pass `params` to `send()` method
+xhttp.send();
+ 
+ 
+}
+</script>
+
+</body>
+</html>
