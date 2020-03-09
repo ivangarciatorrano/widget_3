@@ -3,7 +3,7 @@
     tmpl.innerHTML = `
         <h1>Hello x222222x ivanWorld</h1>
     `;
-     alert('hola');
+     alert('que tal');
     customElements.define('com-sap-sample-helloworld1', class HelloWorld1 extends HTMLElement {
 
 
