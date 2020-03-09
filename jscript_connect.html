@@ -27,7 +27,7 @@ const params = {
   url =   "https://vsystem.ingress.dh-gv528904.dhaas-live.shoot.live.k8s-hana.ondemand.com/app/pipeline-modeler/openapi/service/a55ef27e-14e4-4345-a9f4-50402d505e1f/v1/uploadjson/"
   xhttp.open("POST",url, true);
  xhttp.setRequestHeader("Authorization", "Basic " + btoa(username + ":" + password));  
- xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
+ xhttp.setRequestHeader('X-Requested-Width', 'XMLHttpRequest');
 
  
   // pass `params` to `send()` method
