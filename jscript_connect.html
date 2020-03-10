@@ -29,9 +29,10 @@ const params = {
  xhttp.setRequestHeader("Authorization", "Basic " + btoa(username + ":" + password));  
  xhttp.setRequestHeader('X-Requested-Width', 'XMLHttpRequest');
 
+ xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+xhttp.send(JSON.stringify({ "email": "hello@user.com", "response": { "name": "Tester" } }));
  
-  // pass `params` to `send()` method
-xhttp.send();
+   
  
  
 }
