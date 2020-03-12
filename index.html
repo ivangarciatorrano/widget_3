@@ -27,9 +27,9 @@ function loadDoc() {
   xhttp.setRequestHeader("Authorization", "Basic " + btoa(username + ":" + password));  
   xhttp.setRequestHeader("X-Requested-Width", "XMLHttpRequest");
   xhttp.setRequestHeader("Content-Type", "application/json");
-// xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
-//   xhttp.setRequestHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-//    xhttp.setRequestHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With, Accept');
+ xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
+   xhttp.setRequestHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+    xhttp.setRequestHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With, Accept');
   xhttp.send(JSON.stringify({ "email": "hello@user.com", "response": { "name": "Tester" } }));
    
  
